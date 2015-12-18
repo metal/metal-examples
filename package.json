@@ -1,0 +1,13 @@
+{
+	"name": "metal-examples",
+	"version": "0.0.0",
+	"description": "Many examples using Metal.js for different use cases",
+	"license": "BSD",
+	"repository": "metal/metal-examples",
+	"engines": {
+		"node": ">=0.12.0"
+	},
+	"keywords": [
+		"metal"
+	]
+}

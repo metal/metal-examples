@@ -1,9 +1,9 @@
 {
-	"name": "metal-modal",
+	"name": "metal-examples-simple",
 	"version": "0.0.0",
 	"description": "A simple modal component built with soy templates",
-	"license": "SEE LICENSE IN LICENSE.md",
-	"repository": "metal/metal-modal",
+	"license": "BSD",
+	"repository": "https://github.com/metal/metal-examples/tree/master/soy-component/simple",
 	"engines": {
 		"node": ">=0.12.0"
 	},

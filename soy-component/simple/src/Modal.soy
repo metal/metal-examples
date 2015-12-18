@@ -26,14 +26,16 @@
 {/template}
 
 /**
- * @param footerButtons
+ * @param? footerButtons
  * @param id
  */
 {template .footer}
 	<footer id="{$id}-footer" class="modal-footer">
-		{foreach $button in $footerButtons}
-			<button type="button" class="{$button.class}">{$button.label}</button>
-		{/foreach}
+		{if $footerButtons}
+			{foreach $button in $footerButtons}
+				<button type="button" class="{$button.class}">{$button.label}</button>
+			{/foreach}
+		{/if}
 	</footer>
 {/template}
 

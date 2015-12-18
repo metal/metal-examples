@@ -1,4 +1,4 @@
-# metal-modal
+# metal-examples-simple
 
 A simple modal component built with soy templates.
 

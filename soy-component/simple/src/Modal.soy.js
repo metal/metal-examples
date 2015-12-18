@@ -53,11 +53,13 @@ if (goog.DEBUG) {
  */
 Templates.Modal.footer = function(opt_data, opt_ignored, opt_ijData) {
   var output = '<footer id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '-footer" class="modal-footer">';
-  var buttonList20 = opt_data.footerButtons;
-  var buttonListLen20 = buttonList20.length;
-  for (var buttonIndex20 = 0; buttonIndex20 < buttonListLen20; buttonIndex20++) {
-    var buttonData20 = buttonList20[buttonIndex20];
-    output += '<button type="button" class="' + soy.$$escapeHtmlAttribute(buttonData20['class']) + '">' + soy.$$escapeHtml(buttonData20.label) + '</button>';
+  if (opt_data.footerButtons) {
+    var buttonList22 = opt_data.footerButtons;
+    var buttonListLen22 = buttonList22.length;
+    for (var buttonIndex22 = 0; buttonIndex22 < buttonListLen22; buttonIndex22++) {
+      var buttonData22 = buttonList22[buttonIndex22];
+      output += '<button type="button" class="' + soy.$$escapeHtmlAttribute(buttonData22['class']) + '">' + soy.$$escapeHtml(buttonData22.label) + '</button>';
+    }
   }
   output += '</footer>';
   return soydata.VERY_UNSAFE.ordainSanitizedHtml(output);
