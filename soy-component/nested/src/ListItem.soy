@@ -1,0 +1,16 @@
+{namespace Templates.ListItem}
+
+/**
+ * This is the main content that will be rendered for
+ * the `ListItem` class. Note that it sets the element's
+ * "data-onclick" attribute to "select". That means that
+ * whenever this element is clicked, the `select` function
+ * from the `ListItem` component will be called.
+ * @param id
+ * @param text
+ */
+{template .content}
+	<li id="{$id}" class="list-group-item" data-onclick="select">
+		{$text}
+	</li>
+{/template}

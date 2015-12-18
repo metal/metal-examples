@@ -1,0 +1,22 @@
+{namespace Templates.List}
+
+/**
+ * This is the main content that will be rendered for
+ * the `List` class. Note that it renders templates
+ * from `ListItem`, which also has a component implementation.
+ * Calling its template here will not only render its
+ * contents, but also cause `ListItem` objects to be
+ * automatically instatiated with the given data.
+ * @param id
+ * @param items
+ */
+{template .content}
+	<ul id="{$id}" class="list-group">
+		{foreach $item in $items}
+			{call Templates.ListItem.content}
+				{param id: $id + '-item' + index($item) /}
+				{param text: $item /}
+			{/call}
+		{/foreach}
+	</ul>
+{/template}

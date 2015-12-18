@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: List</title>
+
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../build/globals/list.js"></script>
+</head>
+<body>
+	<h1>List</h1>
+	<script type="text/javascript">
+		new metal.List({
+			items: [
+				'Item 1',
+				'Item 2',
+				'Item 3'
+			]
+		}).render();
+	</script>
+</body>
+</html>

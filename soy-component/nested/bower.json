@@ -1,0 +1,22 @@
+{
+	"name": "metal-examples-nested",
+	"version": "0.0.0",
+	"description": "An example showing nested Metal.js soy components",
+	"main": "src/List.js",
+	"moduleType": [
+		"es6"
+	],
+	"keywords": [
+		"metal"
+	],
+	"ignore": [
+		"*",
+		"!src/**/*",
+		"!test/**/*"
+	],
+	"dependencies": {
+		"bootstrap": "~3.3.4",
+		"metal": "metal/metal.js#master",
+		"metal-jquery-adapter": "metal/metal-jquery-adapter#master"
+	}
+}
