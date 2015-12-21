@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Mouse Position</title>
+
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../build/globals/mousePosition.js"></script>
+</head>
+<body>
+	<h1>Mouse Position</h1>
+	<span id="position"></span>
+	<script type="text/javascript">
+		window.mousePosition = new metal.MousePosition();
+
+		var positionElement = document.querySelector('#position');
+		mousePosition.on('positionChanged', function() {
+			positionElement.innerHTML = 'X = ' +  mousePosition.position[0] +
+				'; Y = ' + mousePosition.position[1] + ';';
+		});
+
+		mousePosition.start();
+	</script>
+</body>
+</html>

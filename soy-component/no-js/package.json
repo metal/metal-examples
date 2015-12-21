@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"description": "A simple modal component built with soy templates and without any custom js code",
 	"license": "BSD",
-	"repository": "https://github.com/metal/metal-examples/tree/master/soy-component/simple",
+	"repository": "https://github.com/metal/metal-examples/tree/master/soy-component/no-js",
 	"engines": {
 		"node": ">=0.12.0"
 	},

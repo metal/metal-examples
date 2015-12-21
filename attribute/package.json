@@ -1,9 +1,9 @@
 {
-	"name": "metal-examples-nested",
+	"name": "metal-examples-attribute",
 	"version": "0.0.0",
-	"description": "An example showing nested Metal.js soy components",
+	"description": "A simple class that has no rendering logic",
 	"license": "BSD",
-	"repository": "https://github.com/metal/metal-examples/tree/master/soy-component/nested",
+	"repository": "https://github.com/metal/metal-examples/tree/master/attribute",
 	"engines": {
 		"node": ">=0.12.0"
 	},

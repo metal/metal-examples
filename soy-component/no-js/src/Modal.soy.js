@@ -77,7 +77,7 @@ if (goog.DEBUG) {
  * @suppress {checkTypes}
  */
 Templates.Modal.header = function(opt_data, opt_ignored, opt_ijData) {
-  return soydata.VERY_UNSAFE.ordainSanitizedHtml('<header id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '-header" class="modal-header"><button type="button" class="close" data-onclick="hide"><span>\u00D7</span></button><h4>' + soy.$$escapeHtml(opt_data.header) + '</h4></header>');
+  return soydata.VERY_UNSAFE.ordainSanitizedHtml('<header id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '-header" class="modal-header"><h4>' + soy.$$escapeHtml(opt_data.header) + '</h4></header>');
 };
 if (goog.DEBUG) {
   Templates.Modal.header.soyTemplateName = 'Templates.Modal.header';
