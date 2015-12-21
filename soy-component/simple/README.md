@@ -2,6 +2,8 @@
 
 A simple modal component built with soy templates.
 
+The code has lots of comments explaining how everything works.
+
 This example was created using [generator-metal](https://www.npmjs.com/package/generator-metal) for the boilerplate. Auto-generated gulp tasks are used for building/testing and other processes, since **generator-metal** uses [gulp-metal](https://www.npmjs.com/package/gulp-metal) automatically.
 
 ## Setup
