@@ -1,0 +1,129 @@
+{namespace Templates.Todo}
+
+/**
+ * @param id
+ */
+{template .content}
+	<div id="{$id}" class="component">
+		<section class="todoapp">
+			{call .header data="all" /}
+			{call .main data="all" /}
+			{call .footer data="all" /}
+		</section>
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
+			<p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
+	</div>
+{/template}
+
+/**
+ * @param id
+ */
+{template .header}
+	<header id="{$id}-header" class="header">
+		<h1>todos</h1>
+		<input
+			class="new-todo"
+			placeholder="What needs to be done?"
+			autofocus
+			data-onkeyup="handleInputKeyUp_">
+	</header>
+{/template}
+
+/**
+ * @param allCompletedChecked
+ * @param id
+ * @param todos
+ * @param visibleItems
+ */
+{template .main}
+	<section id="{$id}-main" class="main{length($todos) == 0 ? ' hidden' : ''}">
+		<input
+			class="toggle-all"
+			type="checkbox"
+			data-onchange="handleToggleAllChange_"
+			{$allCompletedChecked ? 'checked' : ''}>
+		<label for="toggle-all">Mark all as complete</label>
+		{call .list}
+			{param surfaceElementId: $id + '-list' /}
+			{param todos: $todos /}
+			{param visibleItems: $visibleItems /}
+		{/call}
+	</section>
+{/template}
+
+/**
+ * @param surfaceElementId
+ * @param todos
+ * @param visibleItems
+ */
+{template .list}
+	<ul id="{$surfaceElementId}" class="todo-list">
+		{foreach $todo in $todos}
+			<li class="{$todo.completed ? 'completed' : ''}{$visibleItems[index($todo)] ? '' : ' hidden'}" data-index="{index($todo)}">
+				<div class="view">
+					<input
+						class="toggle"
+						type="checkbox"
+						data-onchange="handleCompletedCheckboxChange_"
+						{$todo.completed ? 'checked': ''}
+					>
+					<label data-ondblclick="handleLabelDoubleClick_">{$todo.text}</label>
+					<button class="destroy" data-onclick="handleDestroyClick_"></button>
+				</div>
+				<input class="edit" value="{$todo.text}" data-onkeyup="handleEditKeyUp_">
+			</li>
+		{/foreach}
+	</ul>
+{/template}
+
+/**
+ * @param id
+ * @param incompleteCount
+ * @param selectedFilter
+ * @param todos
+ */
+{template .footer}
+	<footer id="{$id}-footer" class="footer{length($todos) == 0 ? ' hidden' : ''}">
+		<span class="todo-count">
+			<strong>{$incompleteCount}</strong> item{$incompleteCount == 1 ? '' : 's'} left
+		</span>
+		<ul class="filters">
+			<li>
+				<a
+					href="#/"
+					class="{$selectedFilter == 'all' or (not $selectedFilter) ? 'selected' : ''}"
+					data-filter="all"
+					data-onclick="handleFilterClick_">
+					All
+				</a>
+			</li>
+			<li>
+				<a
+					href="#/active"
+					class="{$selectedFilter == 'active' ? 'selected' : ''}"
+					data-filter="active"
+					data-onclick="handleFilterClick_">
+					Active
+				</a>
+			</li>
+			<li>
+				<a
+					href="#/completed"
+					class="{$selectedFilter == 'completed' ? 'selected' : ''}"
+					data-filter="completed"
+					data-onclick="handleFilterClick_">
+					Completed
+				</a>
+			</li>
+		</ul>
+		<button
+			class="clear-completed{$incompleteCount == length($todos) ? ' hidden' : ''}"
+			data-onclick="handleClearCompletedClick_">
+			Clear completed
+		</button>
+	</footer>
+{/template}
