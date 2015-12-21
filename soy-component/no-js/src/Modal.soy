@@ -43,18 +43,12 @@
 {/template}
 
 /**
- * This renders the header content of the modal. Note that it
- * sets the close button's "data-onclick" attribute to "hide".
- * That means that whenever this element is clicked, the `hide`
- * function from the `Modal` component will be called.
+ * This renders the header content of the modal.
  * @param header
  * @param id
  */
 {template .header}
 	<header id="{$id}-header" class="modal-header">
-		<button type="button" class="close" data-onclick="hide">
-			<span>×</span>
-		</button>
 		<h4>{$header}</h4>
 	</header>
 {/template}

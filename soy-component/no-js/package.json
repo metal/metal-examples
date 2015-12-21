@@ -1,0 +1,20 @@
+{
+	"name": "metal-examples-no-js",
+	"version": "0.0.0",
+	"description": "A simple modal component built with soy templates and without any custom js code",
+	"license": "BSD",
+	"repository": "https://github.com/metal/metal-examples/tree/master/soy-component/simple",
+	"engines": {
+		"node": ">=0.12.0"
+	},
+	"scripts": {
+		"test": "gulp test"
+	},
+	"keywords": [
+		"metal"
+	],
+	"devDependencies": {
+		"gulp": "^3.8.11",
+		"gulp-metal": "^0.7.0"
+	}
+}

@@ -1,7 +1,7 @@
 {
-	"name": "metal-examples-simple",
+	"name": "metal-examples-no-js",
 	"version": "0.0.0",
-	"description": "A simple modal component built with soy templates",
+	"description": "A simple modal component built with soy templates and without any custom js code",
 	"main": "src/Modal.js",
 	"moduleType": [
 		"es6"
