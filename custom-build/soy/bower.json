@@ -1,5 +1,5 @@
 {
-  "name": "metal-examples-custom-build-no-soy",
+  "name": "metal-examples-custom-build-soy",
   "version": "0.0.0",
   "description": "A simple code with no soy templates built without any preexisting metal tool",
   "main": "src/Modal.js",
@@ -17,5 +17,8 @@
   "dependencies": {
     "bootstrap": "~3.3.4",
     "metal": "metal/metal.js#master"
+  },
+  "devDependencies": {
+    "requirejs": "~2.1.22"
   }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Modal</title>
+
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../build/bundle.js"></script>
+	<style>
+		.modal {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Modal</h1>
+	<span id="position"></span>
+	<script type="text/javascript">
+		window.modal = new metal.Modal({
+			header: 'Modal header',
+			body: 'Modal body',
+			footerButtons: [
+				{
+					label: 'Ok',
+					class: 'btn btn-primary'
+				}
+			]
+		}).render();
+	</script>
+</body>
+</html>
