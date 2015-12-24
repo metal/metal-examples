@@ -1,0 +1,24 @@
+{
+  "name": "metal-examples-custom-build-babel",
+  "version": "0.0.0",
+  "description": "A simple code with no soy templates built without any preexisting metal tool",
+  "main": "src/Modal.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "metal"
+  ],
+  "ignore": [
+    "*",
+    "!src/**/*",
+    "!test/**/*"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "metal": "metal/metal.js#master"
+  },
+  "devDependencies": {
+    "requirejs": "~2.1.22"
+  }
+}

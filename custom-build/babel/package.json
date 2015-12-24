@@ -1,0 +1,21 @@
+{
+  "name": "metal-examples-custom-build-babel",
+  "version": "0.0.0",
+  "description": "A simple code with no soy templates built without any preexisting metal tool",
+  "license": "BSD",
+  "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/babel",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-babel-globals": "^1.1.0"
+  }
+}
