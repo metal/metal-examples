@@ -1,14 +1,11 @@
 {
   "name": "metal-examples-custom-build-soy",
   "version": "0.0.0",
-  "description": "A simple code with no soy templates built without any preexisting metal tool",
+  "description": "A simple component using soy templates transpiled to ES5 without preexisting metal tools",
   "license": "BSD",
   "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/soy",
   "engines": {
     "node": ">=0.12.0"
-  },
-  "scripts": {
-    "test": "gulp test"
   },
   "keywords": [
     "metal"

@@ -1,7 +1,7 @@
 {
-  "name": "metal-examples-custom-build-soy",
+  "name": "metal-examples-custom-build-jspm",
   "version": "0.0.0",
-  "description": "A simple component using soy templates transpiled to ES5 without preexisting metal tools",
+  "description": "A simple component using soy templates and JSPM",
   "main": "src/Modal.js",
   "moduleType": [
     "es6"

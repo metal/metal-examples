@@ -1,0 +1,27 @@
+{
+  "name": "metal-examples-custom-build-jspm",
+  "version": "0.0.0",
+  "description": "A simple component using soy templates and JSPM",
+  "license": "BSD",
+  "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/jspm",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "build": "metal soy"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "devDependencies": {
+    "jspm": "^0.16.19",
+    "metal-cli": "^0.1.2"
+  },
+  "jspm": {
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
