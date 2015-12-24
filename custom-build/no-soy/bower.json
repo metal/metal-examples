@@ -1,5 +1,5 @@
 {
-  "name": "metal-examples-custom-build-babel",
+  "name": "metal-examples-custom-build-no-soy",
   "version": "0.0.0",
   "description": "A simple code with no soy templates built without any preexisting metal tool",
   "main": "src/Modal.js",

@@ -1,4 +1,4 @@
-# metal-examples-custom-build-babel
+# metal-examples-custom-build-no-soy
 
 A simple code with no soy templates built without any preexisting metal tool.
 

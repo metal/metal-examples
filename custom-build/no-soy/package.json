@@ -1,9 +1,9 @@
 {
-  "name": "metal-examples-custom-build-babel",
+  "name": "metal-examples-custom-build-no-soy",
   "version": "0.0.0",
   "description": "A simple code with no soy templates built without any preexisting metal tool",
   "license": "BSD",
-  "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/babel",
+  "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/no-soy",
   "engines": {
     "node": ">=0.12.0"
   },
