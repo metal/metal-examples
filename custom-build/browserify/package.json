@@ -1,0 +1,22 @@
+{
+  "name": "metal-examples-custom-build-browserify",
+  "version": "0.0.0",
+  "description": "A simple component using soy templates and Browserify",
+  "license": "BSD",
+  "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/browserify",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "build:demo": "metal soy && browserify -d -e demos/Modal.js -t [ babelify --presets metal ] --outfile build/modal.js"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "devDependencies": {
+    "babel-preset-metal": "^1.0.4",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "metal-tools-soy": "0.0.1"
+  }
+}

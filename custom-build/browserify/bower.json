@@ -1,0 +1,21 @@
+{
+  "name": "metal-examples-custom-build-browserify",
+  "version": "0.0.0",
+  "description": "A simple component using soy templates and Browserify",
+  "main": "src/Modal.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "metal"
+  ],
+  "ignore": [
+    "*",
+    "!src/**/*",
+    "!test/**/*"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "metal": "metal/metal.js#master"
+  }
+}
