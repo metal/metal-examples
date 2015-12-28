@@ -1,7 +1,7 @@
 # metal-examples-custom-build-jspm
 A simple component using soy templates and JSPM.
 
-Since this example is a soy component, it needs to use Metal.js's custom logic for compiling soy templates so they can be integrated with the appropriate Component class. This example uses [metal-cli](npmjs.com/package/metal-cli) to compile the templates before bundling the code via JSPM.
+Since this example is a soy component, it needs to use Metal.js's custom logic for compiling soy templates so they can be integrated with the appropriate Component class. This example uses [metal-cli](http://www.npmjs.com/package/metal-cli) to compile the templates before bundling the code via JSPM.
 
 The code has lots of comments explaining how everything works.
 
