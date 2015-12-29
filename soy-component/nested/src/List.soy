@@ -10,10 +10,10 @@
  * @param id
  * @param items
  */
-{template .content}
+{template .render}
 	<ul id="{$id}" class="list-group">
 		{foreach $item in $items}
-			{call Templates.ListItem.content}
+			{call Templates.ListItem.render}
 				{param id: $id + '-item' + index($item) /}
 				{param text: $item /}
 			{/call}

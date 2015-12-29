@@ -21,14 +21,14 @@ if (typeof Templates.ListItem == 'undefined') { Templates.ListItem = {}; }
  * @return {!soydata.SanitizedHtml}
  * @suppress {checkTypes}
  */
-Templates.ListItem.content = function(opt_data, opt_ignored, opt_ijData) {
+Templates.ListItem.render = function(opt_data, opt_ignored, opt_ijData) {
   return soydata.VERY_UNSAFE.ordainSanitizedHtml('<li id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '" class="list-group-item" data-onclick="select">' + soy.$$escapeHtml(opt_data.text) + '</li>');
 };
 if (goog.DEBUG) {
-  Templates.ListItem.content.soyTemplateName = 'Templates.ListItem.content';
+  Templates.ListItem.render.soyTemplateName = 'Templates.ListItem.render';
 }
 
-Templates.ListItem.content.params = ["id","text"];
+Templates.ListItem.render.params = ["id","text"];
 
 class ListItem extends Component {}
 ListItem.RENDERER = SoyRenderer;

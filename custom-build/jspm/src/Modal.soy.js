@@ -21,11 +21,11 @@ if (typeof Templates.Modal == 'undefined') { Templates.Modal = {}; }
  * @return {!soydata.SanitizedHtml}
  * @suppress {checkTypes}
  */
-Templates.Modal.content = function(opt_data, opt_ignored, opt_ijData) {
+Templates.Modal.render = function(opt_data, opt_ignored, opt_ijData) {
   return soydata.VERY_UNSAFE.ordainSanitizedHtml('<div id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '" class="modal"><div class="modal-dialog"><div class="modal-content">' + Templates.Modal.header(opt_data, null, opt_ijData) + Templates.Modal.body(opt_data, null, opt_ijData) + Templates.Modal.footer(opt_data, null, opt_ijData) + '</div></div></div>');
 };
 if (goog.DEBUG) {
-  Templates.Modal.content.soyTemplateName = 'Templates.Modal.content';
+  Templates.Modal.render.soyTemplateName = 'Templates.Modal.render';
 }
 
 
@@ -83,7 +83,7 @@ if (goog.DEBUG) {
   Templates.Modal.header.soyTemplateName = 'Templates.Modal.header';
 }
 
-Templates.Modal.content.params = ["id"];
+Templates.Modal.render.params = ["id"];
 Templates.Modal.body.params = ["id","body"];
 Templates.Modal.footer.params = ["footerButtons","id"];
 Templates.Modal.header.params = ["header","id"];

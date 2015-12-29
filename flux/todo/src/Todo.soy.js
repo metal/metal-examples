@@ -21,11 +21,11 @@ if (typeof Templates.Todo == 'undefined') { Templates.Todo = {}; }
  * @return {!soydata.SanitizedHtml}
  * @suppress {checkTypes}
  */
-Templates.Todo.content = function(opt_data, opt_ignored, opt_ijData) {
+Templates.Todo.render = function(opt_data, opt_ignored, opt_ijData) {
   return soydata.VERY_UNSAFE.ordainSanitizedHtml('<div id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '" class="component"><section class="todoapp">' + Templates.Todo.header(opt_data, null, opt_ijData) + Templates.Todo.main(opt_data, null, opt_ijData) + Templates.Todo.footer(opt_data, null, opt_ijData) + '</section><footer class="info"><p>Double-click to edit a todo</p><p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p><p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p><p>Part of <a href="http://todomvc.com">TodoMVC</a></p></footer></div>');
 };
 if (goog.DEBUG) {
-  Templates.Todo.content.soyTemplateName = 'Templates.Todo.content';
+  Templates.Todo.render.soyTemplateName = 'Templates.Todo.render';
 }
 
 
@@ -96,7 +96,7 @@ if (goog.DEBUG) {
   Templates.Todo.footer.soyTemplateName = 'Templates.Todo.footer';
 }
 
-Templates.Todo.content.params = ["id"];
+Templates.Todo.render.params = ["id"];
 Templates.Todo.header.params = ["id"];
 Templates.Todo.main.params = ["allCompletedChecked","id","todos","visibleItems"];
 Templates.Todo.list.params = ["surfaceElementId","todos","visibleItems"];

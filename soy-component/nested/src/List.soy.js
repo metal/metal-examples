@@ -21,22 +21,22 @@ if (typeof Templates.List == 'undefined') { Templates.List = {}; }
  * @return {!soydata.SanitizedHtml}
  * @suppress {checkTypes}
  */
-Templates.List.content = function(opt_data, opt_ignored, opt_ijData) {
+Templates.List.render = function(opt_data, opt_ignored, opt_ijData) {
   var output = '<ul id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '" class="list-group">';
   var itemList6 = opt_data.items;
   var itemListLen6 = itemList6.length;
   for (var itemIndex6 = 0; itemIndex6 < itemListLen6; itemIndex6++) {
     var itemData6 = itemList6[itemIndex6];
-    output += Templates.ListItem.content({id: opt_data.id + '-item' + itemIndex6, text: itemData6}, null, opt_ijData);
+    output += Templates.ListItem.render({id: opt_data.id + '-item' + itemIndex6, text: itemData6}, null, opt_ijData);
   }
   output += '</ul>';
   return soydata.VERY_UNSAFE.ordainSanitizedHtml(output);
 };
 if (goog.DEBUG) {
-  Templates.List.content.soyTemplateName = 'Templates.List.content';
+  Templates.List.render.soyTemplateName = 'Templates.List.render';
 }
 
-Templates.List.content.params = ["id","items"];
+Templates.List.render.params = ["id","items"];
 
 class List extends Component {}
 List.RENDERER = SoyRenderer;
