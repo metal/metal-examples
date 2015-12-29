@@ -8,7 +8,8 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "build": "metal build -b modal.js"
+    "build": "metal build -b modal.js",
+    "watch": "metal watch -b modal.js"
   },
   "keywords": [
     "metal"
