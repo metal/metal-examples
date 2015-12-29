@@ -1,4 +1,4 @@
-# metal-examples-metal-cli
+# metal-examples-custom-build-metal-cli
 
 A simple component that is compiled by metal-cli.
 

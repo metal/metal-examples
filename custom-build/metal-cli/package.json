@@ -1,9 +1,9 @@
 {
-	"name": "metal-examples-metal-cli",
+	"name": "metal-examples-custom-build-metal-cli",
 	"version": "0.0.0",
 	"description": "A simple component that is compiled by metal-cli",
 	"license": "BSD",
-	"repository": "https://github.com/metal/metal-examples/tree/master/metal-cli",
+	"repository": "https://github.com/metal/metal-examples/tree/master/custom-build/metal-cli",
 	"engines": {
 		"node": ">=0.12.0"
 	},

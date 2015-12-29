@@ -1,5 +1,5 @@
 {
-	"name": "metal-examples-metal-cli",
+	"name": "metal-examples-custom-build-metal-cli",
 	"version": "0.0.0",
 	"description": "A simple component that is compiled by metal-cli",
 	"main": "src/Modal.js",
