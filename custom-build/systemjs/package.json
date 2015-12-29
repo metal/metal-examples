@@ -1,0 +1,19 @@
+{
+  "name": "metal-examples-custom-build-systemjs",
+  "version": "0.0.0",
+  "description": "A simple component using soy templates and System.js",
+  "license": "BSD",
+  "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/systemjs",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "build": "metal soy"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "devDependencies": {
+    "metal-cli": "^0.1.2"
+  }
+}

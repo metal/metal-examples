@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Modal</title>
+
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../bower_components/system.js/dist/system.js"></script>
+	<style>
+		.modal {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Modal</h1>
+	<span id="position"></span>
+	<script type="text/javascript">
+		System.config({
+			defaultJSExtensions: true,
+			baseURL: '../',
+			map: {
+				traceur: 'bower:traceur/traceur'
+			},
+			paths: {
+				// This configures the prefix that metal uses to help import bower components.
+				'bower:*': 'bower_components/*'
+			}
+		});
+
+		System.import('../src/Modal').then(function(Modal) {
+			window.modal = new Modal.default({
+				header: 'Modal header',
+				body: 'Modal body',
+				footerButtons: [
+					{
+						label: 'Ok',
+						class: 'btn btn-primary'
+					}
+				]
+			}).render();
+		});
+	</script>
+</body>
+</html>

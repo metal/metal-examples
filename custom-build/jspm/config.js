@@ -11,6 +11,7 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
+    // This configures the prefix that metal uses to help import bower components.
     'bower:*': 'bower_components/*'
   },
 

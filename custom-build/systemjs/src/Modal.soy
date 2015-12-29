@@ -1,0 +1,60 @@
+{namespace Templates.Modal}
+
+/**
+ * This renders the main content of the `Modal` component.
+ * @param id
+ */
+{template .content}
+	<div id="{$id}" class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				{call .header data="all" /}
+				{call .body data="all" /}
+				{call .footer data="all" /}
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ * This renders the body content of the modal.
+ * @param id
+ * @param body
+ */
+{template .body}
+	<section id="{$id}-body" class="modal-body">
+		{$body}
+	</section>
+{/template}
+
+/**
+ * This renders the footer content of the modal.
+ * @param? footerButtons
+ * @param id
+ */
+{template .footer}
+	<footer id="{$id}-footer" class="modal-footer">
+		{if $footerButtons}
+			{foreach $button in $footerButtons}
+				<button type="button" class="{$button.class}">{$button.label}</button>
+			{/foreach}
+		{/if}
+	</footer>
+{/template}
+
+/**
+ * This renders the header content of the modal. Note that it
+ * sets the close button's "data-onclick" attribute to "hide".
+ * That means that whenever this element is clicked, the `hide`
+ * function from the `Modal` component will be called.
+ * @param header
+ * @param id
+ */
+{template .header}
+	<header id="{$id}-header" class="modal-header">
+		<button type="button" class="close" data-onclick="hide">
+			<span>×</span>
+		</button>
+		<h4>{$header}</h4>
+	</header>
+{/template}

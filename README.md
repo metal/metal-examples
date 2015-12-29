@@ -14,6 +14,8 @@ Many examples using Metal.js for different use cases:
 
 * [`custom-build/soy`](custom-build/soy) - A simple component using soy templates transpiled to ES5 without preexisting metal tools.
 
+* [`custom-build/systemjs`](custom-build/systemjs) - A simple component using soy templates and System.js.
+
 * [`flux/todo`](flux/todo) - A TODO list implementation using Metal.js and Flux.
 
 * [`soy-component/nested`](soy-component/nested) - An example showing nested Metal.js soy components.
