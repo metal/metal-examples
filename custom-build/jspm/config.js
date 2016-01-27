@@ -10,15 +10,14 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*",
-    // This configures the prefix that metal uses to help import bower components.
-    'bower:*': 'bower_components/*'
+    "npm:*": "jspm_packages/npm/*"
   },
 
   map: {
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
+    "metal": "github:metal/metal.js@master",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
