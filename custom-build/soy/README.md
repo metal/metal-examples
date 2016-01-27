@@ -21,7 +21,6 @@ The code has lots of comments explaining how everything works.
 
   ```
   npm install
-  bower install
   ```
 
 4. Build the code:

@@ -5,15 +5,25 @@
   "license": "BSD",
   "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/soy",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
   },
+  "files": [
+    "src",
+    "test"
+  ],
   "keywords": [
     "metal"
   ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "closure-templates": "20140422.0.0",
+    "metal": "metal/metal.js#master"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "gulp": "^3.9.0",
     "gulp-babel-globals": "^1.1.0",
-    "metal-tools-soy": "0.0.1"
+    "metal-tools-soy": "^0.1.1"
   }
 }
