@@ -20,7 +20,6 @@ This example was created using [generator-metal](https://www.npmjs.com/package/g
 
   ```
   npm install
-  bower install
   ```
 
 4. Build the code:
