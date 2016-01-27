@@ -13,7 +13,6 @@ The code has lots of comments explaining how everything works.
 
   ```
   npm install
-  bower install
   ```
 
 3. Build the code:

@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Demo: Modal</title>
 
-	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 
-	<script src="../bower_components/soyutils/soyutils.js"></script>
-	<script src="../bower_components/system.js/dist/system.js"></script>
+	<script src="../node_modules/closure-templates/soyutils.js"></script>
+	<script src="../node_modules/systemjs/dist/system.js"></script>
 	<style>
 		.modal {
 			display: block;
@@ -22,11 +22,11 @@
 			defaultJSExtensions: true,
 			baseURL: '../',
 			map: {
-				traceur: 'bower:traceur/traceur'
+				traceur: 'node_modules/traceur/bin/traceur'
 			},
 			paths: {
-				// This configures the prefix that metal uses to help import bower components.
-				'bower:*': 'bower_components/*'
+				// This configures the prefix that metal uses to help import metal from node_modules.
+				'metal*': 'node_modules/metal*'
 			}
 		});
 

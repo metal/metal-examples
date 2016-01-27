@@ -5,15 +5,27 @@
   "license": "BSD",
   "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/systemjs",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
   },
+  "files": [
+    "src",
+    "test"
+  ],
   "scripts": {
     "build": "metal soy"
   },
   "keywords": [
     "metal"
   ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "closure-templates": "20140422.0.0",
+    "metal": "metal/metal.js#master"
+  },
   "devDependencies": {
-    "metal-cli": "^0.1.2"
+    "metal-cli": "^0.3.0",
+    "systemjs": "^0.19.17",
+    "traceur": "0.0.96"
   }
 }
