@@ -20,15 +20,15 @@ gulp.task('build', function() {
 });
 
 /**
- * This function replaces the "bower:" prefix used by metal with the actual
- * path to bower components. This is a very simple function to implement, but
- * if preferred, you can also use babel-preset-metal
+ * This function replaces import paths that are neither absolute nor relative,
+ * with a path relative to node_modules. This is a very simple function to
+ * implement, but if preferred, you can also use babel-preset-metal
  * (https://www.npmjs.com/package/babel-preset-metal), which already includes
  * this functionality, babel-preset-es2015 as well as other optional helpers.
  */
 function renameAlias(originalPath) {
-  if (originalPath.substr(0, 6) === 'bower:') {
-    return path.join(path.resolve('bower_components'), originalPath.substr(6));
+  if (originalPath[0] !== '.' && originalPath[0] !== '/') {
+    return path.join(path.resolve('node_modules'), originalPath);
   } else {
     return originalPath;
   }

@@ -5,14 +5,23 @@
   "license": "BSD",
   "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/no-soy",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
   },
+  "files": [
+    "src",
+    "test"
+  ],
   "scripts": {
     "build": "gulp build"
   },
   "keywords": [
     "metal"
   ],
+  "dependencies": {
+    "closure-templates": "20140422.0.0",
+    "metal": "metal/metal.js#master"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "gulp": "^3.9.0",

@@ -1,13 +1,13 @@
 'use strict';
 
-import dom from 'bower:metal/src/dom/dom';
+import dom from 'metal/src/dom/dom';
 
 /**
  * The `Attribute` class provides features for configuring
  * state and listening to its changes. It's very useful to
  * extend from it.
  */
-import Attribute from 'bower:metal/src/attribute/Attribute';
+import Attribute from 'metal/src/attribute/Attribute';
 
 /**
  * This class just tracks the mouse position and stores it
