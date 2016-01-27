@@ -14,7 +14,6 @@ It uses [metal-cli](https://www.npmjs.com/package/metal-cli) to build the ES6 co
 
   ```
   npm install
-  bower install
   ```
 
 3. Build the code:

@@ -5,8 +5,13 @@
   "license": "BSD",
   "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/metal-cli",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
   },
+  "files": [
+    "src",
+    "test"
+  ],
   "scripts": {
     "build": "metal build -b modal.js",
     "watch": "metal watch -b modal.js"
@@ -14,7 +19,12 @@
   "keywords": [
     "metal"
   ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "closure-templates": "20140422.0.0",
+    "metal": "metal/metal.js#master"
+  },
   "devDependencies": {
-    "metal-cli": "^0.2.0"
+    "metal-cli": "^0.3.0"
   }
 }
