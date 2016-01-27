@@ -5,18 +5,28 @@
   "license": "BSD",
   "repository": "https://github.com/metal/metal-examples/tree/master/custom-build/browserify",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
   },
+  "files": [
+    "src",
+    "test"
+  ],
   "scripts": {
-    "build:demo": "metal soy && browserify -d -e demos/Modal.js -t [ babelify --presets metal ] --outfile build/modal.js"
+    "build:demo": "metal soy && browserify -d -e demos/Modal.js -g [ babelify --presets metal ] --outfile build/modal.js"
   },
   "keywords": [
     "metal"
   ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "closure-templates": "20140422.0.0",
+    "metal": "metal/metal.js#master"
+  },
   "devDependencies": {
-    "babel-preset-metal": "^1.0.4",
+    "babel-preset-metal": "^2.0.0",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "metal-tools-soy": "0.0.1"
+    "metal-cli": "^0.3.0"
   }
 }
