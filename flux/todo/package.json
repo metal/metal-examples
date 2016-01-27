@@ -5,8 +5,13 @@
   "license": "MIT",
   "repository": "https://github.com/metal/metal-examples/tree/master/flux/todo",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
   },
+  "files": [
+    "src",
+    "test"
+  ],
   "scripts": {
     "test": "gulp test"
   },
@@ -15,12 +20,16 @@
     "flux",
     "todo"
   ],
-  "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-metal": "^0.7.0"
-  },
   "dependencies": {
+    "bootstrap": "^3.3.6",
+    "closure-templates": "20140422.0.0",
+    "metal": "metal/metal.js#master",
+    "metal-flux": "mairatma/metal-flux#master",
     "todomvc-app-css": "^2.0.1",
     "todomvc-common": "^1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-metal": "^0.9.0"
   }
 }

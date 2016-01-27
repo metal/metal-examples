@@ -1,6 +1,6 @@
 'use strict';
 
-import dom from 'bower:metal/src/dom/dom';
+import dom from 'metal/src/dom/dom';
 import TodoActions from './TodoActions';
 import TodoBase from './Todo.soy';
 import TodoStore from './TodoStore';
