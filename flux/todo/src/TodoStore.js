@@ -1,6 +1,6 @@
 'use strict';
 
-import FluxStore from 'metal-flux/src/FluxStore';
+import { FluxStore } from 'metal-flux';
 import TodoActions from './TodoActions';
 import TodoDispatcher from './TodoDispatcher';
 

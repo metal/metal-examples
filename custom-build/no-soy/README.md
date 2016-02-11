@@ -1,8 +1,8 @@
 # metal-examples-custom-build-no-soy
 
-A simple code with no soy templates built without any preexisting metal tool.
+A simple code with no soy templates built without preexisting metal tools.
 
-The code is transpiled to ES5 via a custom gulp task that uses [gulp-babel-globals](http://www.npmjs.com/package/gulp-babel-globals), an npm module that builds es6 modules and all their dependencies to a single globals bundle. You can use anything you like on your build though, this is just an example.
+The code is transpiled to ES5 via a custom gulp task that uses [gulp-babel-globals](http://www.npmjs.com/package/gulp-babel-globals), an npm module that builds es6 modules and all their dependencies to a single globals bundle. It also uses [babel-preset-metal](http://www.npmjs.com/package/babel-preset-metal)  to compile code as expected by Metal.js. You can use anything you like on your build though, this is just an example.
 
 The code has lots of comments explaining how everything works.
 

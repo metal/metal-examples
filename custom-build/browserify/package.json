@@ -21,12 +21,14 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "closure-templates": "20140422.0.0",
-    "metal": "metal/metal.js#master"
+    "metal": "metal/metal.js#master",
+    "metal-component": "metal/metal-component#master",
+    "metal-soy": "metal/metal-soy#master"
   },
   "devDependencies": {
-    "babel-preset-metal": "^2.0.0",
+    "babel-preset-metal": "^2.1.0",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "metal-cli": "^0.3.0"
+    "metal-cli": "^0.4.0"
   }
 }

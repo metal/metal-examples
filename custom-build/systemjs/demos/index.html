@@ -25,8 +25,14 @@
 				traceur: 'node_modules/traceur/bin/traceur'
 			},
 			paths: {
-				// This configures the prefix that metal uses to help import metal from node_modules.
-				'metal*': 'node_modules/metal*'
+				// This configures the entry point for each npm module manually.
+				'metal': 'node_modules/metal/src/metal',
+				'metal-attribute': 'node_modules/metal-attribute/src/Attribute',
+				'metal-component': 'node_modules/metal-component/src/all/component',
+				'metal-dom': 'node_modules/metal-dom/src/all/dom',
+				'metal-events': 'node_modules/metal-events/src/events',
+				'metal-html': 'node_modules/metal-html/src/html',
+				'metal-soy': 'node_modules/metal-soy/src/soy'
 			}
 		});
 

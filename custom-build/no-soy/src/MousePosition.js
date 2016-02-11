@@ -1,13 +1,13 @@
 'use strict';
 
-import dom from 'metal/src/dom/dom';
+import dom from 'metal-dom';
 
 /**
  * The `Attribute` class provides features for configuring
  * state and listening to its changes. It's very useful to
  * extend from it.
  */
-import Attribute from 'metal/src/attribute/Attribute';
+import Attribute from 'metal-attribute';
 
 /**
  * This class just tracks the mouse position and stores it

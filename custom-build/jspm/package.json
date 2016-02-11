@@ -24,16 +24,51 @@
   },
   "devDependencies": {
     "jspm": "^0.16.19",
-    "metal-cli": "^0.3.0"
+    "metal-cli": "^0.4.0"
   },
   "jspm": {
     "dependencies": {
-      "metal": "github:metal/metal.js@master"
+      "metal": "github:metal/metal.js@master",
+      "metal-attribute": "github:metal/metal-attribute@master",
+      "metal-component": "github:metal/metal-component@master",
+      "metal-dom": "github:metal/metal-dom@master",
+      "metal-events": "github:metal/metal-events@master",
+      "metal-html": "github:metal/metal-html@master",
+      "metal-soy": "github:metal/metal-soy@master"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
+      "traceur": "github:jmcriffey/bower-traceur@0.0.93",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93"
+    },
+    "overrides": {
+      "github:metal/metal.js@master": {
+        "registry": "npm",
+        "format": "es6"
+      },
+      "github:metal/metal-soy@master": {
+        "registry": "npm",
+        "format": "es6"
+      },
+      "github:metal/metal-component@master": {
+        "registry": "npm",
+        "format": "es6"
+      },
+      "github:metal/metal-dom@master": {
+        "registry": "npm",
+        "format": "es6"
+      },
+      "github:metal/metal-html@master": {
+        "registry": "npm",
+        "format": "es6"
+      },
+      "github:metal/metal-attribute@master": {
+        "registry": "npm",
+        "format": "es6"
+      },
+      "github:metal/metal-events@master": {
+        "registry": "npm",
+        "format": "es6"
+      }
     }
   }
 }

@@ -20,10 +20,12 @@
   ],
   "dependencies": {
     "closure-templates": "20140422.0.0",
-    "metal": "metal/metal.js#master"
+    "metal": "metal/metal.js#master",
+    "metal-attribute": "metal/metal-attribute#master",
+    "metal-dom": "metal/metal-dom#master"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-metal": "^2.1.4",
     "gulp": "^3.9.0",
     "gulp-babel-globals": "^1.1.0"
   }

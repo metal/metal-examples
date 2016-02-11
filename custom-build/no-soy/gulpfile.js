@@ -5,31 +5,14 @@ var gulp = require('gulp');
 // all their dependencies to a single globals bundle. You can use any babel
 // build you like though.
 var babelGlobals = require('gulp-babel-globals');
-var path = require('path');
 
 gulp.task('build', function() {
   return gulp.src('src/*.js')
     .pipe(babelGlobals({
       babel: {
-        presets: ['es2015'],
-        resolveModuleSource: renameAlias
+        presets: ['metal']
       },
       globalName: 'metal'
     }))
     .pipe(gulp.dest('build'));
 });
-
-/**
- * This function replaces import paths that are neither absolute nor relative,
- * with a path relative to node_modules. This is a very simple function to
- * implement, but if preferred, you can also use babel-preset-metal
- * (https://www.npmjs.com/package/babel-preset-metal), which already includes
- * this functionality, babel-preset-es2015 as well as other optional helpers.
- */
-function renameAlias(originalPath) {
-  if (originalPath[0] !== '.' && originalPath[0] !== '/') {
-    return path.join(path.resolve('node_modules'), originalPath);
-  } else {
-    return originalPath;
-  }
-}

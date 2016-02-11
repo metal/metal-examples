@@ -1,7 +1,7 @@
 # metal-examples-custom-build-soy
 A simple component using soy templates transpiled to ES5 without preexisting metal tools.
 
-The code is transpiled to ES5 via a custom gulp task that uses [gulp-babel-globals](http://www.npmjs.com/package/gulp-babel-globals), an npm module that builds es6 modules and all their dependencies to a single globals bundle. You can use anything you like on your build though, this is just an example.
+The code is transpiled to ES5 via a custom gulp task that uses [gulp-babel-globals](http://www.npmjs.com/package/gulp-babel-globals), an npm module that builds es6 modules and all their dependencies to a single globals bundle. It also uses [babel-preset-metal](http://www.npmjs.com/package/babel-preset-metal)  to compile code as expected by Metal.js. You can use anything you like on your build though, this is just an example.
 
 Since it's a soy component though, it needs to use Metal.js's custom logic for compiling soy templates so they can be integrated with the appropriate Component class. This example uses [metal-tools-soy](http://www.npmjs.com/package/metal-tools-soy) for this, but it could also use [gulp-metal](http://www.npmjs.com/package/gulp-metal)'s soy task instead.
 
