@@ -6,7 +6,6 @@
 
 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 
-	<script src="../node_modules/closure-templates/soyutils.js"></script>
 	<script src="../node_modules/systemjs/dist/system.js"></script>
 	<style>
 		.modal {
@@ -26,13 +25,17 @@
 			},
 			paths: {
 				// This configures the entry point for each npm module manually.
+				'html2incdom': 'node_modules/html2incdom/src/withParser',
 				'metal': 'node_modules/metal/src/metal',
-				'metal-attribute': 'node_modules/metal-attribute/src/Attribute',
+				'metal-state': 'node_modules/metal-state/src/State',
 				'metal-component': 'node_modules/metal-component/src/all/component',
+				'metal-component/src/Component': 'node_modules/metal-component/src/all/component',
 				'metal-dom': 'node_modules/metal-dom/src/all/dom',
 				'metal-events': 'node_modules/metal-events/src/events',
-				'metal-html': 'node_modules/metal-html/src/html',
-				'metal-soy': 'node_modules/metal-soy/src/soy'
+				'metal-incremental-dom': 'node_modules/metal-incremental-dom/src/IncrementalDomRenderer',
+				'metal-soy': 'node_modules/metal-soy/src/Soy',
+				'metal-soy-bundle': 'node_modules/metal-soy-bundle/build/bundle',
+				'metal-soy/src/Soy': 'node_modules/metal-soy/src/Soy'
 			}
 		});
 
