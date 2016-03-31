@@ -5,6 +5,9 @@ var metal = require('gulp-metal');
 metal.registerTasks({
 	bundleCssFileName: 'uri.css',
 	bundleFileName: 'uri.js',
-	mainBuildJsTasks: ['build:globals'],
-	moduleName: 'metal-examples-uri'
+	moduleName: 'metal-examples-uri',
+	testNodeSrc: [
+		'env/test/node.js',
+		'test/**/*.js'
+	]
 });
