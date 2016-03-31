@@ -1,11 +1,13 @@
 'use strict';
 
 import dom from 'metal-dom';
+import templates from './Todo.soy';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
 import TodoActions from './TodoActions';
-import TodoBase from './Todo.soy';
 import TodoStore from './TodoStore';
 
-class Todo extends TodoBase {
+class Todo extends Component {
 	constructor(opt_config) {
 		super(opt_config);
 		this.updateState_();
@@ -115,5 +117,6 @@ class Todo extends TodoBase {
 		this.filter_();
 	}
 }
+Soy.register(Todo, templates);
 
 export default Todo;

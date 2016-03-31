@@ -1,14 +1,33 @@
-{namespace Templates.Todo}
+{namespace Todo}
 
 /**
- * @param id
+ * @param allCompletedChecked
+ * @param incompleteCount
+ * @param selectedFilter
+ * @param todos
+ * @param visibleItems
  */
 {template .render}
-	<div id="{$id}" class="component">
+	<div class="component">
 		<section class="todoapp">
 			{call .header data="all" /}
-			{call .main data="all" /}
-			{call .footer data="all" /}
+			<section class="main{length($todos) == 0 ? ' hidden' : ''}">
+				<input
+					class="toggle-all"
+					type="checkbox"
+					data-onchange="handleToggleAllChange_"
+					{if $allCompletedChecked}checked{/if}>
+				<label for="toggle-all">Mark all as complete</label>
+				{call .list}
+					{param todos: $todos /}
+					{param visibleItems: $visibleItems /}
+				{/call}
+			</section>
+			{call .footer}
+				{param incompleteCount: $incompleteCount /}
+				{param selectedFilter: $selectedFilter /}
+				{param todos: $todos /}
+			{/call}
 		</section>
 		<footer class="info">
 			<p>Double-click to edit a todo</p>
@@ -20,10 +39,9 @@
 {/template}
 
 /**
- * @param id
  */
 {template .header}
-	<header id="{$id}-header" class="header">
+	<header class="header">
 		<h1>todos</h1>
 		<input
 			class="new-todo"
@@ -34,34 +52,11 @@
 {/template}
 
 /**
- * @param allCompletedChecked
- * @param id
- * @param todos
- * @param visibleItems
- */
-{template .main}
-	<section id="{$id}-main" class="main{length($todos) == 0 ? ' hidden' : ''}">
-		<input
-			class="toggle-all"
-			type="checkbox"
-			data-onchange="handleToggleAllChange_"
-			{$allCompletedChecked ? 'checked' : ''}>
-		<label for="toggle-all">Mark all as complete</label>
-		{call .list}
-			{param surfaceElementId: $id + '-list' /}
-			{param todos: $todos /}
-			{param visibleItems: $visibleItems /}
-		{/call}
-	</section>
-{/template}
-
-/**
- * @param surfaceElementId
  * @param todos
  * @param visibleItems
  */
 {template .list}
-	<ul id="{$surfaceElementId}" class="todo-list">
+	<ul class="todo-list">
 		{foreach $todo in $todos}
 			<li class="{$todo.completed ? 'completed' : ''}{$visibleItems[index($todo)] ? '' : ' hidden'}" data-index="{index($todo)}">
 				<div class="view">
@@ -69,7 +64,7 @@
 						class="toggle"
 						type="checkbox"
 						data-onchange="handleCompletedCheckboxChange_"
-						{$todo.completed ? 'checked': ''}
+						{if $todo.completed}checked{/if}
 					>
 					<label data-ondblclick="handleLabelDoubleClick_">{$todo.text}</label>
 					<button class="destroy" data-onclick="handleDestroyClick_"></button>
@@ -81,13 +76,12 @@
 {/template}
 
 /**
- * @param id
- * @param incompleteCount
+ * @param? incompleteCount
  * @param selectedFilter
  * @param todos
  */
 {template .footer}
-	<footer id="{$id}-footer" class="footer{length($todos) == 0 ? ' hidden' : ''}">
+	<footer class="footer{length($todos) == 0 ? ' hidden' : ''}">
 		<span class="todo-count">
 			<strong>{$incompleteCount}</strong> item{$incompleteCount == 1 ? '' : 's'} left
 		</span>
