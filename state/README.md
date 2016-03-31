@@ -1,8 +1,8 @@
-# metal-examples-attribute
+# metal-examples-state
 
 A simple class that has no rendering logic.
 
-Classes that are not meant to be renderable components should not extend from `Component`. They can extend from `Attribute` though, and so take advantage of all the attribute features that components have.
+Classes that are not meant to be renderable components should not extend from `Component`. They can extend from `State` though, and so take advantage of all the state features that components have.
 
 The code has lots of comments explaining how everything works.
 

@@ -3,17 +3,16 @@
 import dom from 'metal-dom';
 
 /**
- * The `Attribute` class provides features for configuring
- * state and listening to its changes. It's very useful to
- * extend from it.
+ * The `State` class provides features for configuring state and listening to
+ * its changes. It's very useful to extend from it.
  */
-import Attribute from 'metal-attribute';
+import State from 'metal-state';
 
 /**
  * This class just tracks the mouse position and stores it
- * on the "position" attribute.
+ * on the "position" state.
  */
-class MousePosition extends Attribute {
+class MousePosition extends State {
 	handleMouseMove_(event) {
 		this.position = [event.clientX, event.clientY];
 	}
@@ -24,10 +23,10 @@ class MousePosition extends Attribute {
 }
 
 /**
- * Attributes should be defined in the `ATTRS` static variable.
+ * State configurations should be defined in the `STATE` static variable.
  * @type {!Object}
  */
-MousePosition.ATTRS = {
+MousePosition.STATE = {
 	position: {
 		validator: Array.isArray,
 		value: [0, 0]
