@@ -9,12 +9,13 @@ System.config({
 
   map: {
     "metal": "github:metal/metal.js@master",
-    "metal-attribute": "github:metal/metal-attribute@master",
     "metal-component": "github:metal/metal-component@master",
     "metal-dom": "github:metal/metal-dom@master",
     "metal-events": "github:metal/metal-events@master",
     "metal-html": "github:metal/metal-html@master",
+    "metal-incremental-dom": "github:metal/metal-incremental-dom@master",
     "metal-soy": "github:metal/metal-soy@master",
+    "metal-state": "github:metal/metal-state@master",
     "traceur": "github:jmcriffey/bower-traceur@0.0.93",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -92,34 +93,19 @@ System.config({
     "github:jspm/nodelibs-zlib@0.1.0": {
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
-    "github:metal/metal-attribute@master": {
-      "babel-cli": "npm:babel-cli@6.5.1",
-      "babel-preset-es2015": "npm:babel-preset-es2015@6.5.0",
-      "bootstrap": "npm:bootstrap@3.3.6",
-      "closure-templates": "npm:closure-templates@20140422.0.0",
-      "metal": "github:metal/metal.js@master",
-      "metal-events": "github:metal/metal-events@master"
-    },
     "github:metal/metal-component@master": {
-      "bootstrap": "npm:bootstrap@3.3.6",
-      "closure-templates": "npm:closure-templates@20140422.0.0",
       "metal": "github:metal/metal.js@master",
-      "metal-attribute": "github:metal/metal-attribute@master",
       "metal-dom": "github:metal/metal-dom@master",
       "metal-events": "github:metal/metal-events@master",
-      "metal-html": "github:metal/metal-html@master"
+      "metal-state": "github:metal/metal-state@master"
     },
     "github:metal/metal-dom@master": {
       "bootstrap": "npm:bootstrap@3.3.6",
-      "closure-templates": "npm:closure-templates@20140422.0.0",
       "metal": "github:metal/metal.js@master",
       "metal-events": "github:metal/metal-events@master"
     },
     "github:metal/metal-events@master": {
-      "babel-cli": "npm:babel-cli@6.5.1",
-      "babel-preset-es2015": "npm:babel-preset-es2015@6.5.0",
       "bootstrap": "npm:bootstrap@3.3.6",
-      "closure-templates": "npm:closure-templates@20140422.0.0",
       "metal": "github:metal/metal.js@master"
     },
     "github:metal/metal-html@master": {
@@ -129,12 +115,20 @@ System.config({
       "closure-templates": "npm:closure-templates@20140422.0.0",
       "metal": "github:metal/metal.js@master"
     },
+    "github:metal/metal-incremental-dom@master": {
+      "incremental-dom": "npm:incremental-dom@0.3.0",
+      "metal-component": "github:metal/metal-component@master"
+    },
     "github:metal/metal-soy@master": {
-      "bootstrap": "npm:bootstrap@3.3.6",
-      "closure-templates": "npm:closure-templates@20140422.0.0",
+      "html2incdom": "npm:html2incdom@0.1.5",
       "metal": "github:metal/metal.js@master",
       "metal-component": "github:metal/metal-component@master",
-      "metal-dom": "github:metal/metal-dom@master"
+      "metal-incremental-dom": "github:metal/metal-incremental-dom@master",
+      "metal-soy-bundle": "npm:metal-soy-bundle@0.2.2"
+    },
+    "github:metal/metal-state@master": {
+      "metal": "github:metal/metal.js@master",
+      "metal-events": "github:metal/metal-events@master"
     },
     "github:metal/metal.js@master": {
       "babel-cli": "npm:babel-cli@6.5.1",
@@ -686,6 +680,11 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:closure-templates@20151008.0.0": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:combined-stream@1.0.5": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "delayed-stream": "npm:delayed-stream@1.0.0",
@@ -963,6 +962,14 @@ System.config({
     "npm:globals@8.18.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:google-closure-library@20160218.0.2": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "vm": "github:jspm/nodelibs-vm@0.1.0"
+    },
     "npm:graceful-fs@4.1.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "constants": "github:jspm/nodelibs-constants@0.1.0",
@@ -1026,6 +1033,9 @@ System.config({
     },
     "npm:https-browserify@0.0.0": {
       "http": "github:jspm/nodelibs-http@1.7.1"
+    },
+    "npm:incremental-dom@0.3.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:indent-string@2.1.0": {
       "repeating": "npm:repeating@2.0.0"
@@ -1178,6 +1188,13 @@ System.config({
       "read-pkg-up": "npm:read-pkg-up@1.0.1",
       "redent": "npm:redent@1.0.0",
       "trim-newlines": "npm:trim-newlines@1.0.0"
+    },
+    "npm:metal-soy-bundle@0.2.2": {
+      "closure-templates": "npm:closure-templates@20151008.0.0",
+      "closure-templates-incrementaldom": "npm:closure-templates-incrementaldom@0.0.1",
+      "google-closure-library": "npm:google-closure-library@20160218.0.2",
+      "incremental-dom": "npm:incremental-dom@0.3.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:micromatch@2.3.7": {
       "arr-diff": "npm:arr-diff@2.0.0",
