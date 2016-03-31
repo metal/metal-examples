@@ -1,36 +1,31 @@
 'use strict';
 
 /**
- * At the end of `List.soy.js`, a component was automatically
- * generated and exported. This is being imported here
- * as `ListBase`.
+ * The soy template functions are automatically exported by `List.soy.js`.
  */
-import ListBase from './List.soy';
+import templates from './List.soy';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
 
 // This is importing `ListItem` to mark that this component
 // depends on it, to guarantee that the `ListItem` file will
 // be loaded whenever `List` is.
 import './ListItem';
 
-/**
- * The `List` class is extending from the class exported
- * from its soy file to add more behavior to it. `ListBase`
- * could be used directly if no customization was needed
- * though.
- */
-class List extends ListBase {
-
+class List extends Component {
 }
 
+// This line is declaring that `List` will be using the given soy templates for
+// rendering itself.
+Soy.register(List, templates);
+
 /**
- * This is adding more configuration to this class'
- * attributes.
+ * This is adding more configuration to this class' state.
  * @type {!Object}
  */
-List.ATTRS = {
+List.STATE = {
 	/**
-	 * The `items` attribute's default value will be an
-	 * empty list.
+	 * The `items` state's default value will be an empty list.
 	 * @type {!Array}
 	 */
 	items: {

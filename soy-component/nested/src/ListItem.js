@@ -1,19 +1,13 @@
 'use strict';
 
 /**
- * At the end of `ListItem.soy.js`, a component was
- * automatically generated and exported. This is being
- * imported here as `ListItemBase`.
+ * The soy template functions are automatically exported by `ListItem.soy.js`.
  */
-import ListItemBase from './ListItem.soy';
+import templates from './ListItem.soy';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
 
-/**
- * The `ListItem` class is extending from the class exported
- * from its soy file to add more behavior to it. `ListItemBase`
- * could be used directly if no customization was needed
- * though.
- */
-class ListItem extends ListItemBase {
+class ListItem extends Component {
 	/**
 	 * This function is used as a listener by the soy file.
 	 * @param  {!Event} event
@@ -22,5 +16,9 @@ class ListItem extends ListItemBase {
 		console.log('Item selected', event.delegateTarget);
 	}
 }
+
+// This line is declaring that `ListItem` will be using the given soy templates
+// for rendering itself.
+Soy.register(ListItem, templates);
 
 export default ListItem;
