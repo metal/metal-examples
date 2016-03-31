@@ -7,13 +7,12 @@
 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="../build/modal.css">
 
-	<script src="../node_modules/closure-templates/soyutils.js"></script>
 	<script src="../build/globals/modal.js"></script>
 </head>
 <body>
 	<h1>Modal</h1>
 	<script type="text/javascript">
-		window.modal = new metal.Modal({
+		window.modal = new metalNamed.Modal.Modal({
 			header: 'Modal header',
 			body: 'Modal body',
 			footerButtons: [

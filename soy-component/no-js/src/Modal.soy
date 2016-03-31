@@ -1,54 +1,29 @@
-{namespace Templates.Modal}
+{namespace Modal}
 
 /**
  * This renders the main content of the `Modal` component.
- * @param id
+ * @param body
+ * @param? footerButtons
+ * @param header
  */
 {template .render}
-	<div id="{$id}" class="modal">
+	<div class="modal">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				{call .header data="all" /}
-				{call .body data="all" /}
-				{call .footer data="all" /}
+				<header class="modal-header">
+					<h4>{$header}</h4>
+				</header>
+				<section class="modal-body">
+					{$body}
+				</section>
+				<footer class="modal-footer">
+					{if $footerButtons}
+						{foreach $button in $footerButtons}
+							<button type="button" class="{$button.class}">{$button.label}</button>
+						{/foreach}
+					{/if}
+				</footer>
 			</div>
 		</div>
 	</div>
-{/template}
-
-/**
- * This renders the body content of the modal.
- * @param id
- * @param body
- */
-{template .body}
-	<section id="{$id}-body" class="modal-body">
-		{$body}
-	</section>
-{/template}
-
-/**
- * This renders the footer content of the modal.
- * @param? footerButtons
- * @param id
- */
-{template .footer}
-	<footer id="{$id}-footer" class="modal-footer">
-		{if $footerButtons}
-			{foreach $button in $footerButtons}
-				<button type="button" class="{$button.class}">{$button.label}</button>
-			{/foreach}
-		{/if}
-	</footer>
-{/template}
-
-/**
- * This renders the header content of the modal.
- * @param header
- * @param id
- */
-{template .header}
-	<header id="{$id}-header" class="modal-header">
-		<h4>{$header}</h4>
-	</header>
 {/template}

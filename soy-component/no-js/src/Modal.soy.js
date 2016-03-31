@@ -1,93 +1,91 @@
 /* jshint ignore:start */
-import Component from 'metal-component';
-import { SoyAop, SoyRenderer, SoyTemplates } from 'metal-soy';
-var Templates = SoyTemplates.get();
+import Component from 'metal-component/src/Component';
+import Soy from 'metal-soy/src/Soy';
+var templates;
+goog.loadModule(function(exports) {
+
 // This file was automatically generated from Modal.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Templates.Modal.
+ * @fileoverview Templates in namespace Modal.
+ * @public
  */
 
-if (typeof Templates.Modal == 'undefined') { Templates.Modal = {}; }
+goog.module('Modal.incrementaldom');
+
+var soy = goog.require('soy');
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
 
 
 /**
- * @param {Object.<string, *>=} opt_data
+ * @param {Object<string, *>=} opt_data
  * @param {(null|undefined)=} opt_ignored
- * @param {Object.<string, *>=} opt_ijData
- * @return {!soydata.SanitizedHtml}
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
  * @suppress {checkTypes}
  */
-Templates.Modal.render = function(opt_data, opt_ignored, opt_ijData) {
-  return soydata.VERY_UNSAFE.ordainSanitizedHtml('<div id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '" class="modal"><div class="modal-dialog"><div class="modal-content">' + Templates.Modal.header(opt_data, null, opt_ijData) + Templates.Modal.body(opt_data, null, opt_ijData) + Templates.Modal.footer(opt_data, null, opt_ijData) + '</div></div></div>');
-};
+function $render(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'modal');
+    ie_open('div', null, null,
+        'class', 'modal-dialog');
+      ie_open('div', null, null,
+          'class', 'modal-content');
+        ie_open('header', null, null,
+            'class', 'modal-header');
+          ie_open('h4');
+            itext((goog.asserts.assert((opt_data.header) != null), opt_data.header));
+          ie_close('h4');
+        ie_close('header');
+        ie_open('section', null, null,
+            'class', 'modal-body');
+          itext((goog.asserts.assert((opt_data.body) != null), opt_data.body));
+        ie_close('section');
+        ie_open('footer', null, null,
+            'class', 'modal-footer');
+          if (opt_data.footerButtons) {
+            var buttonList15 = opt_data.footerButtons;
+            var buttonListLen15 = buttonList15.length;
+            for (var buttonIndex15 = 0; buttonIndex15 < buttonListLen15; buttonIndex15++) {
+              var buttonData15 = buttonList15[buttonIndex15];
+              ie_open('button', null, null,
+                  'type', 'button',
+                  'class', buttonData15['class']);
+                itext((goog.asserts.assert((buttonData15.label) != null), buttonData15.label));
+              ie_close('button');
+            }
+          }
+        ie_close('footer');
+      ie_close('div');
+    ie_close('div');
+  ie_close('div');
+}
+exports.render = $render;
 if (goog.DEBUG) {
-  Templates.Modal.render.soyTemplateName = 'Templates.Modal.render';
+  $render.soyTemplateName = 'Modal.render';
 }
 
+exports.render.params = ["body","footerButtons","header"];
+templates = exports;
+return exports;
 
-/**
- * @param {Object.<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object.<string, *>=} opt_ijData
- * @return {!soydata.SanitizedHtml}
- * @suppress {checkTypes}
- */
-Templates.Modal.body = function(opt_data, opt_ignored, opt_ijData) {
-  return soydata.VERY_UNSAFE.ordainSanitizedHtml('<section id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '-body" class="modal-body">' + soy.$$escapeHtml(opt_data.body) + '</section>');
-};
-if (goog.DEBUG) {
-  Templates.Modal.body.soyTemplateName = 'Templates.Modal.body';
-}
-
-
-/**
- * @param {Object.<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object.<string, *>=} opt_ijData
- * @return {!soydata.SanitizedHtml}
- * @suppress {checkTypes}
- */
-Templates.Modal.footer = function(opt_data, opt_ignored, opt_ijData) {
-  var output = '<footer id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '-footer" class="modal-footer">';
-  if (opt_data.footerButtons) {
-    var buttonList22 = opt_data.footerButtons;
-    var buttonListLen22 = buttonList22.length;
-    for (var buttonIndex22 = 0; buttonIndex22 < buttonListLen22; buttonIndex22++) {
-      var buttonData22 = buttonList22[buttonIndex22];
-      output += '<button type="button" class="' + soy.$$escapeHtmlAttribute(buttonData22['class']) + '">' + soy.$$escapeHtml(buttonData22.label) + '</button>';
-    }
-  }
-  output += '</footer>';
-  return soydata.VERY_UNSAFE.ordainSanitizedHtml(output);
-};
-if (goog.DEBUG) {
-  Templates.Modal.footer.soyTemplateName = 'Templates.Modal.footer';
-}
-
-
-/**
- * @param {Object.<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object.<string, *>=} opt_ijData
- * @return {!soydata.SanitizedHtml}
- * @suppress {checkTypes}
- */
-Templates.Modal.header = function(opt_data, opt_ignored, opt_ijData) {
-  return soydata.VERY_UNSAFE.ordainSanitizedHtml('<header id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '-header" class="modal-header"><h4>' + soy.$$escapeHtml(opt_data.header) + '</h4></header>');
-};
-if (goog.DEBUG) {
-  Templates.Modal.header.soyTemplateName = 'Templates.Modal.header';
-}
-
-Templates.Modal.render.params = ["id"];
-Templates.Modal.body.params = ["id","body"];
-Templates.Modal.footer.params = ["footerButtons","id"];
-Templates.Modal.header.params = ["header","id"];
+});
 
 class Modal extends Component {}
-Modal.RENDERER = SoyRenderer;
-SoyAop.registerTemplates('Modal');
-export default Modal;
+Soy.register(Modal, templates);
+export default templates;
+export { Modal, templates };
 /* jshint ignore:end */
