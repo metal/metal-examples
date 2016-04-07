@@ -9,4 +9,4 @@ window.modal = new Modal({
 			class: 'btn btn-primary'
 		}
 	]
-}).render();
+});

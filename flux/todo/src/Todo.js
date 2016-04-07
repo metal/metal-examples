@@ -8,8 +8,7 @@ import TodoActions from './TodoActions';
 import TodoStore from './TodoStore';
 
 class Todo extends Component {
-	constructor(opt_config) {
-		super(opt_config);
+	created() {
 		this.updateState_();
 	}
 

@@ -11,7 +11,7 @@ describe('Modal', function() {
 	});
 
 	it('should hide when close button is clicked', function() {
-		modal = new Modal().render();
+		modal = new Modal();
 		assert.ok(modal.visible);
 
 		dom.triggerEvent(modal.element.querySelector('.close'), 'click');
