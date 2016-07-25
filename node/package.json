@@ -25,7 +25,7 @@
 	],
 	"dependencies": {
     "bootstrap": "^3.3.6",
-		"metal": "metal/metal.js#master"
+		"metal": "^2.0.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.4.5",
