@@ -13,21 +13,24 @@
     "test"
   ],
   "scripts": {
-    "build:demo": "metal soy && browserify -d -e demos/Modal.js -g [ babelify --presets metal ] --outfile build/modal.js"
+    "build": "metal soy && browserify -d -e src/Modal.js -t babelify -s Modal -o build/modal.js"
+  },
+  "babel": {
+    "presets": ["metal"]
   },
   "keywords": [
     "metal"
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "metal": "metal/metal.js#master",
-    "metal-component": "metal/metal-component#master",
-    "metal-soy": "metal/metal-soy#master"
+    "metal": "^2.0.0",
+    "metal-component": "^2.0.0",
+    "metal-soy": "^2.0.0"
   },
   "devDependencies": {
-    "babel-preset-metal": "^3.0.0",
+    "babel-preset-metal": "^4.0.0",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "metal-cli": "^1.0.0"
+    "metal-cli": "^2.0.0"
   }
 }
