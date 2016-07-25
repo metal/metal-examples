@@ -1,6 +1,6 @@
 /* jshint ignore:start */
-import Component from 'metal-component/src/Component';
-import Soy from 'metal-soy/src/Soy';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
 var templates;
 goog.loadModule(function(exports) {
 
@@ -239,9 +239,13 @@ if (goog.DEBUG) {
 }
 
 exports.render.params = ["allCompletedChecked","incompleteCount","selectedFilter","todos","visibleItems"];
+exports.render.types = {"allCompletedChecked":"any","incompleteCount":"any","selectedFilter":"any","todos":"any","visibleItems":"any"};
 exports.header.params = [];
+exports.header.types = {};
 exports.list.params = ["todos","visibleItems"];
+exports.list.types = {"todos":"any","visibleItems":"any"};
 exports.footer.params = ["incompleteCount","selectedFilter","todos"];
+exports.footer.types = {"incompleteCount":"any","selectedFilter":"any","todos":"any"};
 templates = exports;
 return exports;
 
@@ -249,6 +253,6 @@ return exports;
 
 class Todo extends Component {}
 Soy.register(Todo, templates);
-export default templates;
 export { Todo, templates };
+export default templates;
 /* jshint ignore:end */
