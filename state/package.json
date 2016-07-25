@@ -20,10 +20,10 @@
 		"metal"
 	],
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "metal": "metal/metal.js#master",
-		"metal-dom": "metal/metal-dom#master",
-    "metal-state": "metal/metal-state#master"
+		"bootstrap": "^3.3.6",
+		"metal": "^2.0.0",
+		"metal-dom": "^2.0.0",
+		"metal-state": "^2.0.0"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
