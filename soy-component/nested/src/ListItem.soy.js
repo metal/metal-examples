@@ -1,6 +1,6 @@
 /* jshint ignore:start */
-import Component from 'metal-component/src/Component';
-import Soy from 'metal-soy/src/Soy';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
 var templates;
 goog.loadModule(function(exports) {
 
@@ -52,6 +52,7 @@ if (goog.DEBUG) {
 }
 
 exports.render.params = ["text"];
+exports.render.types = {"text":"any"};
 templates = exports;
 return exports;
 
@@ -59,6 +60,6 @@ return exports;
 
 class ListItem extends Component {}
 Soy.register(ListItem, templates);
-export default templates;
 export { ListItem, templates };
+export default templates;
 /* jshint ignore:end */
