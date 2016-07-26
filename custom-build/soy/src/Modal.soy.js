@@ -1,6 +1,6 @@
 /* jshint ignore:start */
-import Component from 'metal-component/src/Component';
-import Soy from 'metal-soy/src/Soy';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
 var templates;
 goog.loadModule(function(exports) {
 
@@ -91,6 +91,7 @@ if (goog.DEBUG) {
 }
 
 exports.render.params = ["body","footerButtons","header"];
+exports.render.types = {"body":"any","footerButtons":"any","header":"any"};
 templates = exports;
 return exports;
 
@@ -98,6 +99,6 @@ return exports;
 
 class Modal extends Component {}
 Soy.register(Modal, templates);
-export default templates;
 export { Modal, templates };
+export default templates;
 /* jshint ignore:end */
