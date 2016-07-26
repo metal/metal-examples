@@ -1,18 +1,20 @@
 module.exports = {
-	entry: './demos/Modal.js',
+	entry: './src/Modal.js',
 	output: {
-      path: './build',
-      filename: 'modal.js'
-  },
+		library: 'Modal',
+		path: './build',
+		filename: 'modal.js'
+	},
 	module: {
-	  loaders: [
-	    {
-	      test: /\.js?$/,
-	      loader: 'babel',
-	      query: {
-	        presets: ['metal']
-	      }
-	    }
-	  ]
+		loaders: [
+			{
+				test: /\.js?$/,
+				exclude: /node_modules/,
+				loader: 'babel',
+				query: {
+					presets: ['es2015']
+				}
+			}
+		]
 	}
 };

@@ -5,6 +5,7 @@
 	<title>Demo: Modal</title>
 
 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="../build/modal.js"></script>
 	<style>
 		.modal {
 			display: block;
@@ -13,6 +14,17 @@
 </head>
 <body>
 	<h1>Modal</h1>
-	<script src="../build/modal.js"></script>
+	<script>
+		window.modal = new Modal.default({
+			header: 'Modal header',
+			body: 'Modal body',
+			footerButtons: [
+				{
+					label: 'Ok',
+					class: 'btn btn-primary'
+				}
+			]
+		});
+	</script>
 </body>
 </html>
