@@ -21,11 +21,11 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "metal": "metal/metal.js#master",
-    "metal-component": "metal/metal-component#master",
-    "metal-soy": "metal/metal-soy#master"
+    "metal": "^2.0.0",
+    "metal-component": "^2.0.0",
+    "metal-soy": "^2.0.0"
   },
   "devDependencies": {
-    "metal-cli": "^1.0.0"
+    "metal-cli": "^2.0.0"
   }
 }
