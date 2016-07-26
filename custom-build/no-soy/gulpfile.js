@@ -10,7 +10,7 @@ gulp.task('build', function() {
   return gulp.src('src/*.js')
     .pipe(babelGlobals({
       babel: {
-        presets: ['metal']
+        presets: ['metal-resolve-source', 'es2015']
       },
       globalName: 'metal'
     }))
