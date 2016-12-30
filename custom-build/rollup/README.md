@@ -20,7 +20,7 @@ The code has lots of comments explaining how everything works.
 3. Build the code:
 
   ```
-  npm run build:demo
+  npm run build
   ```
 
 4. Open the demo at demos/index.html on your browser.
