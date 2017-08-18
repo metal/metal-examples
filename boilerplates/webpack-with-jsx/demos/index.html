@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Modal</title>
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+	<h1>Modal</h1>
+
+	<script src="../build/Modal.js"></script>
+	<script>
+		window.modal = new Modal.default({
+			header: 'Modal header',
+			body: 'Modal body',
+			footerButtons: [
+				{
+					label: 'Ok',
+					class: 'btn btn-primary'
+				}
+			]
+		});
+	</script>	
+</body>
+</html>
