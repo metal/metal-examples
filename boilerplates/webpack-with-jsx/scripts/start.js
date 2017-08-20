@@ -97,12 +97,6 @@ function setupCompiler(host, port, protocol) {
   });
 }
 
-function addMiddleware(devServer) {
-  // Finally, by now we have certainly resolved the URL.
-  // It may be /index.html, so let the dev server try serving it again.
-  devServer.use(devServer.middleware);
-}
-
 function runDevServer(host, port, protocol) {
   var devServer = new WebpackDevServer(compiler, {
     // Enable gzip compression of generated files.
@@ -117,6 +111,7 @@ function runDevServer(host, port, protocol) {
     // in the Webpack development configuration. Note that only changes
     // to CSS are currently hot reloaded. JS changes will refresh the browser.
     hot: true,
+    inline: true,
     publicPath: paths.appPublic,
     // WebpackDevServer is noisy by default so we emit custom message instead
     // by listening to the compiler events with `compiler.plugin` calls above.
@@ -130,9 +125,6 @@ function runDevServer(host, port, protocol) {
     https: protocol === "https",
     host: host
   });
-
-  // Our custom middleware proxies requests to /index.html or a remote API.
-  addMiddleware(devServer);
 
   // Launch WebpackDevServer.
   devServer.listen(port, err => {
