@@ -6,7 +6,7 @@ class Modal extends JSXComponent {
 		return (
 			<div class="my-modal">
 				<h2>Hello World!</h2>
-				<p>This is a random template</p>
+				<p>This is a JSX template</p>
 			</div>
 		);
 	}

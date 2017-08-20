@@ -56,16 +56,6 @@ function build() {
     console.log(`${chalk.cyan(paths.appBuildReport)}`);
     console.log();
 
-    const build = path.relative(process.cwd(), paths.appBuild);
-    console.log('The ' + chalk.cyan(build) + ' folder is ready to be deployed.');
-    console.log('You may serve it with a static server:');
-    console.log();
-    if (useYarn) {
-      console.log(`  ${chalk.cyan('yarn')} start`);
-    } else {
-      console.log(`  ${chalk.cyan('npm')} start`);
-    }
-    console.log();
   });
 }
 

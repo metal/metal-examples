@@ -9,5 +9,12 @@
 	},
 	"keywords": [
 		"metal"
-	]
+	],
+	"scripts": {
+		"archive-boilerplates": "node helpers/archive-boilerplates.js"
+	},
+	"devDependencies": {
+		"chalk": "^2.1.0",
+		"zip-folder": "^1.0.0"
+	}
 }
