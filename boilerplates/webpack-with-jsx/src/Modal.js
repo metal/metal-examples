@@ -1,4 +1,3 @@
-import './modal.scss';
 import JSXComponent from 'metal-jsx';
 
 class Modal extends JSXComponent {
