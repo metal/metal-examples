@@ -11,10 +11,12 @@
 		"metal"
 	],
 	"scripts": {
-		"archive-boilerplates": "node helpers/archive-boilerplates.js"
+		"archive-boilerplates": "gulp archive:boilerplates"
 	},
 	"devDependencies": {
 		"chalk": "^2.1.0",
+		"gulp": "^3.9.1",
+		"gulp-zip": "^4.0.0",
 		"zip-folder": "^1.0.0"
 	}
 }
