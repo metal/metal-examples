@@ -1,4 +1,4 @@
-import templates from './CloseHeader.soy';
+import templates from './CloseHeader.soy.js';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 
