@@ -1,4 +1,5 @@
 import './modal.scss';
+import './CloseHeader.soy.js';
 import templates from './Modal.soy.js';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
