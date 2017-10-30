@@ -22,17 +22,22 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              'metal-jsx'
+            ]
+          }
         }
       },
       {
         test: /\.scss$/,
         use: [
-          { loader: 'style-loader'}, 
-          { loader: 'css-loader' }, 
+          { loader: 'style-loader'},
+          { loader: 'css-loader' },
           { loader: 'sass-loader' }
         ]
-      }     
+      }
     ]
   }
 };
